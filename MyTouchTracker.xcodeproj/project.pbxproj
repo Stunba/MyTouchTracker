@@ -14,6 +14,8 @@
 		B60250E414BF6E52000A5BC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B60250E314BF6E52000A5BC2 /* main.m */; };
 		B60250E714BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B60250E614BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.m */; };
 		B60250EA14BF6E52000A5BC2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B60250E814BF6E52000A5BC2 /* MainWindow.xib */; };
+		B60250F214BF6F67000A5BC2 /* TouchDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B60250F114BF6F67000A5BC2 /* TouchDrawView.m */; };
+		B60250F614BF6FB4000A5BC2 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = B60250F514BF6FB4000A5BC2 /* Line.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,17 @@
 		B60250D614BF6E52000A5BC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B60250D814BF6E52000A5BC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B60250DA14BF6E52000A5BC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B60250DE14BF6E52000A5BC2 /* MyTouchTracker-Info.plist */ = {isa = PBXFileReference; path = "MyTouchTracker-Info.plist"; sourceTree = "<group>"; };
+		B60250DE14BF6E52000A5BC2 /* MyTouchTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyTouchTracker-Info.plist"; sourceTree = "<group>"; };
 		B60250E014BF6E52000A5BC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B60250E214BF6E52000A5BC2 /* MyTouchTracker-Prefix.pch */ = {isa = PBXFileReference; path = "MyTouchTracker-Prefix.pch"; sourceTree = "<group>"; };
+		B60250E214BF6E52000A5BC2 /* MyTouchTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyTouchTracker-Prefix.pch"; sourceTree = "<group>"; };
 		B60250E314BF6E52000A5BC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B60250E514BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.h */ = {isa = PBXFileReference; path = MyTouchTrackerAppDelegate.h; sourceTree = "<group>"; };
+		B60250E514BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTouchTrackerAppDelegate.h; sourceTree = "<group>"; };
 		B60250E614BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTouchTrackerAppDelegate.m; sourceTree = "<group>"; };
 		B60250E914BF6E52000A5BC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B60250F014BF6F67000A5BC2 /* TouchDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDrawView.h; sourceTree = "<group>"; };
+		B60250F114BF6F67000A5BC2 /* TouchDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDrawView.m; sourceTree = "<group>"; };
+		B60250F414BF6FB4000A5BC2 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Line.h; sourceTree = "<group>"; };
+		B60250F514BF6FB4000A5BC2 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +80,13 @@
 		B60250DC14BF6E52000A5BC2 /* MyTouchTracker */ = {
 			isa = PBXGroup;
 			children = (
+				B60250F314BF6F9E000A5BC2 /* model */,
 				B60250E514BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.h */,
 				B60250E614BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.m */,
 				B60250E814BF6E52000A5BC2 /* MainWindow.xib */,
 				B60250DD14BF6E52000A5BC2 /* Supporting Files */,
+				B60250F014BF6F67000A5BC2 /* TouchDrawView.h */,
+				B60250F114BF6F67000A5BC2 /* TouchDrawView.m */,
 			);
 			path = MyTouchTracker;
 			sourceTree = "<group>";
@@ -91,6 +100,15 @@
 				B60250E314BF6E52000A5BC2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B60250F314BF6F9E000A5BC2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B60250F414BF6FB4000A5BC2 /* Line.h */,
+				B60250F514BF6FB4000A5BC2 /* Line.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +172,8 @@
 			files = (
 				B60250E414BF6E52000A5BC2 /* main.m in Sources */,
 				B60250E714BF6E52000A5BC2 /* MyTouchTrackerAppDelegate.m in Sources */,
+				B60250F214BF6F67000A5BC2 /* TouchDrawView.m in Sources */,
+				B60250F614BF6FB4000A5BC2 /* Line.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
